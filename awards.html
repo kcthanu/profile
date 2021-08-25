@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My PortFolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.6.2/animate.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=DM Serif Text' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js"></script>
+     <!--<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">-->
+        <style>
+     .serviceBox{
+    color: #999;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 10px 0 15px;
+    position: relative;
+}
+.serviceBox:before,
+.serviceBox:after{
+    content: "";
+    background: #cebd74;
+    width: 150px;
+    height: 10px;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    clip-path: polygon(7% 0%, 93% 0%, 100% 100%, 0% 100%);
+}
+.serviceBox:after{
+    width: 80%;
+    height: 15px;
+    border-radius: 0 0 10px 10px;
+    top: auto;
+    bottom: 0;
+    clip-path: none;
+}
+.serviceBox .service-content{
+    background: rgb(255, 255, 255);
+    padding: 25px 20px;
+    border-radius: 10px;
+}
+.serviceBox .service-content:before{
+    content: "";
+    background:#e0c23b;
+    width: 128px;
+    height: 100px;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+.serviceBox .service-icon{
+    color: #77787a;
+    background: linear-gradient(to left, #dedfe1, #f3f3f3);
+    font-size: 40px;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px rgba(0,0,0,0.03);
+    position: relative;
+    z-index: 1;
+}
+.serviceBox .service-icon:before{
+    content: "";
+    background: linear-gradient(to right, #dedfe1, #f3f3f3);
+    width: 88%;
+    height: 88%;
+    border-radius: 50%;
+    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+}
+.serviceBox .title{
+    color: #971108;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+.serviceBox .description{
+    font-size: 14px;
+    line-height: 24px;
+    color:black;
+    margin: 0;
+}
+.serviceBox.green:before{ background: #719e2a; }
+.serviceBox.green:after,
+.serviceBox.green .service-content:before{
+    background: #85bc16;
+}
+.serviceBox.green .title{ color: #85bc16; }
+@media only screen and (max-width:990px){
+    .serviceBox{ margin: 0 0 30px; }
+}
+
+.counter{
+    color: #616161;
+    background: linear-gradient(to right bottom,#fff 50%, #f9f9f9 51%);
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    width: 200px;
+    padding: 20px 0 0;
+    margin: 0 auto;
+    border-radius: 50px 0;
+    box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+.counter .counter-icon{
+    font-size: 45px;
+    margin: 0 0 10px;
+}
+.counter h3{
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin: 0 0 20px;
+}
+.counter .counter-value{
+    color: #fff;
+    background: linear-gradient(to right bottom,#a0a0a0,#969696);
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 40px;
+    padding: 7px 0 3px;
+    display: block;
+}
+.counter.blue{ color: #76bdda; }
+.counter.blue .counter-value{ background: linear-gradient(to right bottom, #a4d1df, #0092CD); }
+.counter.orange{ color: #fcf0ac; }
+.counter.orange .counter-value{ background: linear-gradient(to right bottom, #f3e16f, #f1e390); }
+.counter.red{ color: #ddc77f; }
+.counter.red .counter-value{ background: linear-gradient(to right bottom, grey, grey); }
+.counter.green{ color: #bbe6bb; }
+.counter.green .counter-value{ background: linear-gradient(to right bottom, #97db97, #a3e9bd); }
+.counter.purple{ color: #b395da; }
+.counter.purple .counter-value{ background: linear-gradient(to right bottom, #b395da, #b395da); }
+.counter.pink{ color: #bbe6bb; }
+.counter.pink .counter-value{ background: linear-gradient(to right bottom, #d677ce, #dd79b3); }
+@media screen and (max-width:990px){
+    .counter{ margin-bottom: 40px; }
+}
+        * 
+        {
+            font-family: Courgette;
+        }
+        .nav-item .c:link
+    {
+      color: white;/*#757070;*/
+
+    }
+        .nav-item .c:hover
+    {
+      color: #D9B84F;/*#757070;*/
+      border-top:2px solid  #D9B84F;
+      border-bottom: 2px solid #D9B84F;
+      padding-top: 6px;
+      padding-bottom: 6px;
+
+    }
+    .c 
+    {
+      color: white;
+      font-size: 18px;
+    }
+    @media screen and (min-width: 751px) {
+    
+    
+    #aboutid
+    {
+      font-size: 20px;
+    }
+    #aboutus
+   {
+     background-image: url('https://i.ibb.co/WpW2Lpw/i4.png');
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 540px;
+  background-position: center;
+   }
+   .about-h1 
+   {
+    color:rgb(173, 125, 3);
+    text-align: center;
+    font-size:35px;
+   }
+   
+   .about-p2 
+    {
+      font-size:18px;
+      font-family:Courgette;
+      line-height: 40px;
+    }
+   
+    .left 
+    {
+      width:60%;
+    }
+    .right 
+    {
+      width: 40%;
+    }
+    .about-img 
+    {
+      margin-top:20px;
+      margin-left:20px;
+      width: 400px;
+      height:400px;
+      border-radius: 50%;
+      
+    }
+    
+  }
+  
+  @media screen and (max-width: 750px) {
+    .left 
+    {
+      width:75%;
+    }
+    .right 
+    {
+      width: 25%;
+    }
+   
+    .about-h1 
+   {
+    color:rgb(173, 125, 3);
+    text-align: center;
+    font-size:35px;
+   }
+    .about-img 
+    {
+      margin-top:70px;
+      height: 200px;
+      width: 200px;
+
+    }
+   #aboutus
+   {
+     background-image: url('https://i.ibb.co/WpW2Lpw/i4.png');
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 400px;
+  background-position: center;
+   }
+   
+    #aboutid 
+    {
+      font-size:16px;
+    }
+   
+  }
+    </style>
+     
+  
+  </head>
+  <body>
+           
+    <!--Navigation bar start -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="box-shadow: 0px 3px 4px rgb(82, 87, 80);background-color:#414141;padding:5px;border: none;margin-bottom:0%;font-size:16px;color:darkred;font-family:Courgette">
+       <div class="container-fluid">
+         <div class="navbar-header">
+           <button type="button" style="background-color:rgb(252, 165, 5);border:none;"  class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>                        
+           </button>
+           <a class="navbar-brand" href="#" style="color: goldenrod;font-size:23px;">My PortFolio</a>
+         </div>
+         <div class="collapse navbar-collapse" id="myNavbar">
+           <ul class="nav navbar-nav navbar-right text-danger">
+            <li class="nav-item"><a href="index.html"><span class="c" >&nbsp;Home&nbsp;</span></a></li>
+            <li class="nav-item"><a href="skills.html"><span class="c" >&nbsp;Skill set&nbsp;</span></a></li>
+            <li class="nav-item"><a href="research.html"><span class="c">&nbsp;Research&nbsp;</span></a></li>
+            <li class="nav-item"><a href="awards.html"><span class="c" >&nbsp;Awards&nbsp;</span></a></li>
+            <li class="nav-item"><a href="events.html"><span class="c" >&nbsp;Events&nbsp;</span></a></li>
+            </ul>
+         </div>
+       </div>
+     </nav>
+    <br><br></br>
+     <!--Navigation bar ends-->
+ <!--awards set starts-->
+ <div class="container-fluid" style="background-color: #f5eded;">
+    <img src="data:image/jpeg;base64,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" style="display: block;margin-left: auto;margin-right: auto;width: 42px;">
+    <h1 class="about-h12" style="font-family:Quintessential;text-align: center;color:rgb(129, 29, 29)" >Awards</h1>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="serviceBox">
+                    <div class="service-content">
+                        <div class="service-icon">
+                           <img height="70px" width="90px" src="images/download-removebg-preview.png" >
+                        </div>
+                        <h3 class="title">Best <span>Faculty Award</span></h3>
+                        <p class="description">From Cognizant for the year 2016-17.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="serviceBox">
+                    <div class="service-content">
+                        <div class="service-icon">
+                           <img height="70px" width="90px" src="images/download-removebg-preview.png" >
+                        </div>
+                        <h3 class="title">Best <span>Faculty Award</span></h3>
+                        <p class="description">From Virtusa Consulting Services Limited for
+                            Excellency and Competency of performance towards training the students on Front End
+                            Engineering Technology</p>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="col-sm-4">
+                <div class="serviceBox">
+                    <div class="service-content">
+                        <div class="service-icon">
+                           <img height="70px" width="90px" src="images/download-removebg-preview.png" >
+                        </div>
+                        <h3 class="title">WIPRO Certified Faculty</span></h3>
+                        <p class="description"> Scored 92.36% in J2EE Technologies
+                            by WIPRO Technologies, Bangalore.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="serviceBox">
+                    <div class="service-content">
+                        <div class="service-icon">
+                           <img height="70px" width="90px" src="images/download-removebg-preview.png" >
+                        </div>
+                        <h3 class="title">Winner of SIH 2019 (Hardware Edition)</span></h3>
+                        <p class="description">For the problem
+                            statement provided by BEML, organized by Ministry of Human Resource and
+                            Development (MHRD) and All India Council for Technical Education (AICTE) at Reva
+                            University, Bengaluru.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="serviceBox">
+                    <div class="service-content">
+                        <div class="service-icon">
+                           <img height="70px" width="90px" src="images/download-removebg-preview.png" >
+                        </div>
+                        <h3 class="title">Best Team Mentor Award</span></h3>
+                        <p class="description">In Smart India Hackathon 2018 for the problem
+                            statement provided by Government of Delhi organized by Ministry of Human Resource
+                            and Development (MHRD) and All India Council for Technical Education (AICTE).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="serviceBox">
+                    <div class="service-content">
+                        <div class="service-icon">
+                           <img height="70px" width="90px" src="images/download-removebg-preview.png" >
+                        </div>
+                        <h3 class="title">Excellence Academic Performance of Students Award</span></h3>
+                        <p class="description">For achieving 100%
+                            results for the subjects Object Oriented Programming, Java Programming, Embedded
+                            Systems, Service Oriented Architecture and Professional Ethics.</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <br><br>
+ </div>
+ <hr>
+ <div class="container-fluid" style="background-color: #f5eded;;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5bcn1HQLGnsVzfJZua0Fvtf_RlyqY6a1vRg&usqp=CAU" style="display: block;margin-left: auto;margin-right: auto;width: 42px;">
+    <h1 class="about-h12" style="font-family:Quintessential;text-align: center;color:rgb(129, 29, 29)" >Achievements</h1>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="serviceBox">
+                    <div class="service-content">
+                        <div class="service-icon">
+                           <img height="70px" width="90px" src="https://i.ibb.co/jVmT2rL/achieve-removebg-preview.png" >
+                        </div>
+                        <p class="description">Shortlisted by AICTE under AICTE-LITE program on Web Development.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="serviceBox">
+                    <div class="service-content">
+                        <div class="service-icon">
+                           <img height="70px" width="90px" src="https://i.ibb.co/jVmT2rL/achieve-removebg-preview.png" >
+                        </div>
+                        <p class="description">Received Gold Medal/Topper in online NPTEL course Programming in C with a score
+                            of 90%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="serviceBox">
+                    <div class="service-content">
+                        <div class="service-icon">
+                           <img height="70px" width="90px" src="https://i.ibb.co/jVmT2rL/achieve-removebg-preview.png" >
+                        </div>
+                        <p class="description">Received Gold Medal in online NPTEL course Programming in Java with a score of
+                            93%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="serviceBox">
+                    <div class="service-content">
+                        <div class="service-icon">
+                           <img height="70px" width="90px" src="https://i.ibb.co/jVmT2rL/achieve-removebg-preview.png" >
+                        </div>
+                      
+                        <p class="description">Participated in The Great Mind Challenge -2010 contest conducted by IBM, India.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="serviceBox">
+                    <div class="service-content">
+                        <div class="service-icon">
+                           <img height="70px" width="90px" src="https://i.ibb.co/jVmT2rL/achieve-removebg-preview.png" >
+                        </div>
+                       
+                        <p class="description">Received Gold Medal in Java and C++ domain and Silver Medal in Problem Solving
+                            domain and 30 Days Code Challenge in Hackerrank Platform.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="serviceBox">
+                    <div class="service-content">
+                        <div class="service-icon">
+                           <img height="70px" width="90px" src="https://i.ibb.co/jVmT2rL/achieve-removebg-preview.png" >
+                        </div>
+                        
+                        <p class="description">Consistently scoring above 80% in students’ feedback for teaching learning process.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="serviceBox">
+                    <div class="service-content">
+                        <div class="service-icon">
+                           <img height="70px" width="90px" src="https://i.ibb.co/jVmT2rL/achieve-removebg-preview.png" >
+                        </div>
+                       
+                        <p class="description">Successfully completed the short-term certificate course with ‘B’ grade on Embedded
+                            System Programming organized by the AU-PERS Centre, Anna University, Chennai.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="serviceBox">
+                    <div class="service-content">
+                        <div class="service-icon">
+                           <img height="70px" width="90px" src="https://i.ibb.co/jVmT2rL/achieve-removebg-preview.png" >
+                        </div>
+                       
+                        <p class="description">Have been appreciated for excellent students’ performance in the subjects that I specialize
+                            in: Java Programming and Embedded Systems.</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-4">
+            <div class="serviceBox">
+                <div class="service-content">
+                    <div class="service-icon">
+                       <img height="70px" width="90px" src="https://i.ibb.co/jVmT2rL/achieve-removebg-preview.png" >
+                    </div>
+                   
+                    <p class="description">Cleared National Programming Aptitude Test - NPAT 2017 with a score of 100% and
+                        94 th percentile by National Programme of Technology Enhanced Learning (NPTEL) in
+                        association with ACM India.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="serviceBox">
+                <div class="service-content">
+                    <div class="service-icon">
+                       <img height="70px" width="90px" src="https://i.ibb.co/jVmT2rL/achieve-removebg-preview.png" >
+                    </div>
+                   
+                    <p class="description">Received Excellence Academic Performance of Students Award for achieving 100%
+                        results for the subjects Object Oriented Programming, Java Programming, Embedded
+                        Systems, Service Oriented Architecture and Professional Ethics.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    <br><br>
+ </div>
+ <!--awards ends-->
+     <!--footer starts-->
+     <div class="container-fluid" style="color:white;padding-top:10px;padding-bottom:10px;width:100%;background-color: #414141;color: black;">
+         
+        <div class="row">
+         <div class="col-sm-3"></div>
+         <div class="col-sm-2"> <h4 style="color: goldenrod;">Contact me</h4></div>
+         <div class="col-sm-2"><i class="material-icons" style="font-size:20px;border-radius:50%;background-color:rgba(179, 179, 179,0.5);padding:4px;color:white">call</i><span style="display:inline-block;color:white" class="stay">&nbsp;+91 98409 78088</span></div>
+         <div class="col-sm-2"><i class="material-icons" style="font-size:20px;border-radius:50%;background-color:rgba(179, 179, 179,0.5);padding:4px;color:white">mail_outline</i><span class="stay" style="color: white;">&nbsp;kct.it@rmkec.ac.in</span></div>
+         <div class="col-sm-3"></div>
+     </div>
+       
+ 
+</div>
+
+     <!--footer ends-->
+</body>
+</html>
