@@ -303,6 +303,7 @@
             <li class="nav-item"><a href="research.html"><span class="c">&nbsp;Research&nbsp;</span></a></li>
             <li class="nav-item"><a href="awards.html"><span class="c" >&nbsp;Awards&nbsp;</span></a></li>
             <li class="nav-item"><a href="events.html"><span class="c" >&nbsp;Events&nbsp;</span></a></li>
+            <li class="nav-item"><a href="martialartsim.html"><span class="c" >&nbsp;Martial Arts Simulator&nbsp;</span></a></li>
             </ul>
          </div>
        </div>
@@ -310,13 +311,14 @@
     <br><br></br>
      <!--Navigation bar ends-->
  <!--Martial Arts Sim Starts from here-->
+
 <p>Canvas:</p>
 <canvas id="myCanvas" width="500" height="500" style="border:1px solid #d3d3d3;">
 Your browser does not support the HTML5 canvas tag.
 </canvas>
 
 <script>
-function moveup() {
+function punch() {
 
 	var canvas = document.getElementById("myCanvas");
 	var context = canvas.getContext("2d");
@@ -328,7 +330,7 @@ function moveup() {
 	img.src = "https://github.com/kcthanu/profile/blob/main/images/punch.png";
 }
 
-function moveleft() {
+function kick() {
 
 	var canvas = document.getElementById("myCanvas");
 	var context = canvas.getContext("2d");
@@ -342,9 +344,8 @@ function moveleft() {
 </script>
 
 <div style="text-align:center;width:480px;">
-  <button onclick="moveup()">Kick</button><br><br>
-  <button onclick="moveleft()">Punch</button>
-  
+  <button onclick="kick()">Kick</button><br><br>
+  <button onclick="punch()">Punch</button>
 </div>
 
 </body>
