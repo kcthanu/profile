@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body onload = martialanimate("idle")>
+
+<p>Canvas:</p>
+<canvas id="myCanvas" width="500" height="500" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+	const imageURL = [1,2,3,4,5,6,7]; // list of image URLs
+	const images = []; /// array to hold images.
+	var imageCount = 0; // number of loaded images;
+	var canvas = document.getElementById("myCanvas");
+	var ctx= canvas.getContext("2d");
+	frames = {
+	idle:[1,2,3,4,5,6,7,8],
+	kick: [1,2,3,4,5,6,7],
+	punch:[1,2,3,4,5,6,7],
+};
+function  imagePath(fno,action){
+	return "C:\\Users\\Smile\\Desktop\\images\\" + action+ "\\" + fno+ ".png";
+}
+
+// function called once all images have loaded.
+
+function allLoaded(){
+    // all images have loaded and can be rendered
+	
+
+	images.forEach((src,index) => {  // for each image 
+	setTimeout(function() { 
+	ctx.clearRect(0,0,500,500);
+	ctx.drawImage(src,0,0,500,500);  }, 100*index);
+	});
+document.addEventListener("keyup",(event) => {
+	const key = event.key;
+	if(key === ArrowLeft){
+		martialanimate("kick");
+	}
+	else if(key === ArrowRight){
+		martialanimate("punch");
+	}
+});	
+}
+
+function martialanimate(action){
+imageCount =0;
+// iterate each image URL, create, load, and add it to the images array
+	imageURL.forEach(src => {  // for each image url
+     	const image = new Image();
+     	image.src = imagePath(src,action);
+     	image.onload = ()=>{ 
+         	imageCount += 1;
+         	if(imageCount === imageURL.length){ // have all loaded????
+             		allLoaded(); // call function to start rendering
+         	}
+     }
+     images[src-1]=image; // add loading image to images array
+});
+}
+
+
+
+</script>
+<div style="text-align:center;width:480px;">
+  <button id="kick" onclick = martialanimate("kick")>Kick</button>
+  <button id="punch" onclick = martialanimate("punch")>Punch</button> 
+</div>
+
+</body>
+</html>
+
